@@ -1,0 +1,31 @@
+@import '@/assets/styles/variables';
+
+.footer {
+  background: $black;
+  border-top: 4px solid $green;
+  box-shadow: 0 -8px 0 $accent;
+  padding: 24px 0;
+  transition: all 0.2s ease;
+
+  > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70px;
+    padding: 0 20px;
+  }
+
+  p {
+    color: $white;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: color 0.15s ease;
+    cursor: default;
+
+        &:hover {
+      color: $green;
+    }
+  }
+}
