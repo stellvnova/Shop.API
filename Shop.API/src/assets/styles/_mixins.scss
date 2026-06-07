@@ -1,0 +1,14 @@
+@mixin sectionSettings {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  border: 2px solid $black;
+  border-radius: 32px;
+  box-shadow: 8px 8px 0 $black;
+  margin: 30px 0;
+  padding: 50px 40px;
+  transition: all 0.25s ease;
+  
+  &:hover {
+    box-shadow: 12px 12px 0 $accent;
+  }
+}
