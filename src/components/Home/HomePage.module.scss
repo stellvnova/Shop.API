@@ -1,0 +1,49 @@
+@import '@/assets/styles/variables';
+@import '@/assets/styles/mixins';
+
+.homePage {
+  @include sectionSettings;
+  gap: clamp(24px, 4vw, 40px);
+
+  .title {
+    @include title;
+  }
+
+  .text {
+    font-size: 18px;
+    line-height: 1.6;
+    color: $black;
+    max-width: 600px;
+    text-align: center;
+
+    .textBold {
+      font-weight: 700;
+      color: $accent;
+    }
+  }
+
+  .link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 32px;
+    background: $green;
+    color: $black;
+    font-weight: 700;
+    text-decoration: none;
+    border: 3px solid $black;
+    border-radius: 16px;
+    box-shadow: 5px 5px 0 $black;
+    transition: all 0.1s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+
+    &:hover {
+      background: $accent;
+      color: $white;
+      box-shadow: 3px 3px 0 $black;
+      transform: translate(2px, 2px);
+    }
+  }
+}

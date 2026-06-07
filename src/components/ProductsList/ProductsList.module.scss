@@ -1,0 +1,70 @@
+@import '@/assets/styles/variables';
+@import '@/assets/styles/mixins';
+
+.productsList {
+  @include sectionSettings;
+  gap: 40px;
+
+  > .title {
+    @include title;
+    &::after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  > .form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    > .input {
+      flex: 1 1 250px;
+      padding: 14px 20px;
+      border: 3px solid $black;
+      border-radius: 14px;
+      background: $white;
+      font-weight: 500;
+      box-shadow: 4px 4px 0 $black;
+      transition: all 0.1s ease;
+
+      &:focus {
+        box-shadow: 6px 6px 0 $green;
+        outline: none;
+      }
+    }
+
+    > .button {
+      padding: 14px 32px;
+      background: $green;
+      color: $black;
+      font-weight: 700;
+      border: 3px solid $black;
+      border-radius: 16px;
+      box-shadow: 5px 5px 0 $black;
+      transition: all 0.1s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      cursor: pointer;
+
+      &:hover {
+        background: $accent;
+        color: $white;
+        box-shadow: 3px 3px 0 $black;
+        transform: translate(2px, 2px);
+      }
+    }
+  }
+
+  > .list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 42px;
+    list-style: none;
+    padding: 0;
+  }
+}
